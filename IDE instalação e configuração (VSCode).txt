@@ -1,0 +1,45 @@
+abre aba welcome por default
+
+aba open editors mostra os arquivos abertos
+
+source control: integração com git hub
+-inicializar repositório
+-publicar repositório
+
+extensões são maneiras de tornar o vscode mais potente 
+
+alt + clique em outras linhas: cursor funciona em todas as linhas, no local que você clicou
+
+ctrl+f -> replace -> mudar as ocorrências em que um determinado nome aparece 
+
+editor word wrap column -> define onde quebra o texto
+
+ctrl+p -> busca de arquivos
+ctrl+shift+p -> mostra comandos do vscode 
+
+ctrl k + ctrl s -> comandos de teclado 
+
+emmet(?): função que consiste em vários atalhos/comandos para criar estruturas de código
+
+EXTENSÕES 
+personalizar a experiência dentro do vscode
+
+linters: ferramenta que busca erros no código 
+vscode-icons: editar e mostrar de forma personalizada os ícones dos arquivos 
+
+no terminal, o comando "code + arquivo" irá abrir o arquivo no vscode
+I. É possível executar comandos git dentro do terminal do VSCode
+II. O terminal do VSCode equivale ao terminal do sistema operacional
+III. O atalho padrão para abrir o terminal é CTRL + Shift + crase
+
+GERAL 
+na aba configurações, não é possível: alterar a cor da fonte do editor 
+ctrl +p // ctrl shit p 
+terminal: todas corretas 
+core: comando próprio do VSCode para realizar ações no terminal 
+VSCode está disponível para: windows, linux e mac 
+outras IDEs para JavaScript: atom, sublime e brackets 
+os 4 itens padrão existentes desde a primeira instalação do VSCode na Barra de Atividades: explorador, buscar, source control, debugar e extensões 
+ação na aba welcome: criar um novo arquivo 
+adicione em path é essencial na instalação
+é possível procurar por extensões específicas para diversas linguagens

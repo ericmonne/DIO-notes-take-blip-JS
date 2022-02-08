@@ -1,0 +1,27 @@
+BOOTSTRAP
+framework para desenvolvimento de sites responsivos
+possui uma vasta biblioteca de componentes que facilita e agiliza o desenvolvimento de páginas web 
+um dos frameworks mais conhecidos e usados para desenvolvimento front-end 
+
+arquivos .css e .min tê o mesmo conteúdo
+.css : conteúdo identado
+.min : sem identação, sem espaço -> arquivo minificado, sendo menor, carrega mais rápido na página
+
+tag <dl> (Definition List) capaz de fazer listas de definições.
+Os elementos que vão entre as tags <dl> e </dl> são de dois tipos: 
+<dt> (Definition term) 
+O texto entre <dt> e </dt> fica em negrito e recebe o termo a ser definido,
+<dd> (definition description).   
+o texto entre <dd> e </dd> recebe a descrição do termo.
+
+GERAL
+dl e dt: I, II, III e IV
+img html: I e II
+rubik: III IV e V 
+Verificar se o Bootstrap está funcionando: modificar o tamanho da tela para verificar sua responsividade
+livros: II III e IV 
+bootstrap: II e III
+padding-bottom
+medida para padding: mm, %, px e cm (todas)
+botões: III 
+definir cor de letra: hexadecimal, nome, hsl e rdb (todas)

@@ -1,0 +1,196 @@
+Tim Berners-Lee:
+1991 - HTML1
+1995 - HTML2
+1997 - HTML3 e HTML4
+2014 - HTML5
+
+ELEMENTO HTML 
+é a base do arquivo HTML 
+tudo dentro do arquivo é um elemento 
+
+Abrir a tag
+<h1 atributo>
+Fechar a tag
+Conteúdo</h1> 
+
+Elemento HTML:
+<h1 class="titulo">Título</h1>
+
+Estrutura básica:
+<!DOCTYPE html> (não é elemento html, apenas diz ao navegador o que você está escrevendo)
+<html> - raiz do documento, todos os elementos devem estar dentro dela. Nela nós informamos ao navegador o idioam do nosso documento através do atributo lang (pt-BR) 
+ <head> - contém elementos lidos pelo navegador (ex: metadados, charset (utf-8))
+  <meta>
+  <title></title>
+ </head>
+ <body> - todo o conteúdo visível ao usuário
+ </body>
+</html>
+
+
+SEMÂNTICA 
+
+<section> 
+representa seção genérica do conteúdo 
+ex: lista de artigos 
+<header>
+cabeçalho da página ou parte da página 
+<article>
+conteúdo relevante dentro da página
+ex: artigo de um blog 
+<aside>
+conteúdo relacionado ao principal
+ex: links relacionados, biografia do autor
+geralmente representado por uma barra lateral
+<footer>
+rodapé da página ou de um article ou section 
+<h1>-<h6>
+são anteriores à HTML5, mas trazem semântica 
+representam a importância de um título dentro da página 
+
+TEXTOS E LINKS 
+HTML foi criado para compartilhar textos e documentos 
+
+H1 - título da página
+H2 - título da seção 
+H3 - título do artigo 
+
+<p></p> 
+utilizado para textos maiores e mais densos
+representa um parágrafo
+suporta mais do que apenas texto: imagens, códigos, vídeos e outros conteúdos 
+
+<a></a>
+âncora que interliga conteúdos web 
+tem vários atributos
+
+<a href="link.com/in/monne">NomeDoLink</a>
+<a href="mailto:user@email.com">Email</a>
+hiperlink para onde a página está apontando 
+para apontar para emails ou telefones, é necessário inserir um prefixo (mailto e tel)
+
+<a target="_blank">Link</a>
+indica como o link será aberto
+_blank = abrir link em nova aba
+
+IMAGENS 
+<img>
+não possui tag de fechamento 
+2 atributos próprios:
+<img src=img/avatar.jpg">
+é obrigatório
+guarda o caminho da imagem 
+imagem pode ser do mesmo site ou de outro 
+<img alt="Foto disso aqui">
+não é obrigatório, mas é recomendado
+aumenta acessibilidade
+mostra a descrição da foto quando ela não é carregada
+leitores de tela usam a descrição para mostrar pros usuários o que ela significa 
+
+www.tinypng.com 
+site útil para remover metadados desnecessários das imagens 
+
+LISTAS
+agrupar coleções de itens 
+
+<ul>
+lista em que a ordem dos itens não é importante 
+
+<ol>
+ordem dos itens é importante
+itens são representados com numeros, letras ou algarismos romanos 
+
+<li>
+item da lista 
+
+
+GERAL HTML 
+href: atributo que representa o hiperlink para onde a âncora <a> aponta
+img adiciona uma imagem no HTML
+semântica serve para dar significado ao código HTML 
+lista não ordenada: a ordem dos itens não é importante; é representada pelo elemento ul 
+um elemento HTML é formado por uma tag e seus atributos. Adicionalmente, alguns elementos podem possuir um conteúdo, delimitado pela abertura e fechamento de sua respectiva tag 
+dentro de um elemento p podemos colocar qualquer tipo de conteúdo 
+INCORRETO: só pode ser usado uma vez por página
+alt em imagem: mostra a descrição da imagem caso ela não carregue 
+H1 a H6 não foram criados na versão 5 do HTML 
+dentro do head, podemos colocar: metadados, CSS e links para arquivos externos
+
+
+
+CSS3 
+
+surge da necessidade de formatar páginas
+criado em 1996
+regras de estilo para elementos ou grupos de elementos
+funciona como cascata
+uma regra CSS é formada por:
+a) seletor(es)
+elementos HTML 
+b) declarações
+propriedade + valor
+
+pode haver regras para elementos do mesmo tipo
+IDs e Classes 
+podem representar quaisquer tipos de elemento 
+HTML 
+<header id="header" class="header"></header>
+<header class="header"></header>
+CSS 
+classe é precedida por um ponto -> .header 
+ID é precedida por # -> #header
+
+ID 
+só pode ser usado uma vez na página 
+
+BOX MODEL
+o navegador exibe cada elemento HTML com uma caixa retangular
+CSS permite alterar a aparência dessa caixa 
+4 áreas:
+1) margin/margem
+espaçamento entre elementos 
+2) border/borda
+circundam o padding e o conteúdo 
+cor e largura podem ser alteradas
+3) padding
+espaçamento entre a borda e o conteúdo
+4) content/conteúdo
+
+ESTILIZANDO 
+padding: 
+padding-top/right/bottom/left:
+background-color/image/position
+border: largura, cor, estilo
+border-width/color/style
+border-top-width/color/style 
+border-radius: pixels e porcentagens 
+
+font-family: 
+estiliza fonte do texto
+é possível adicionar duas -> se a primeira não funcionar, a segunda entra como backup
+
+font-size/style/weight:
+text-transform: uppercase/lowercase/capitalize(só as iniciais)
+text-decoration: underline/overline/line-through -> coloca linhas para dar destaque ao texto
+
+list-style-type: muda o marcador da lista
+list-style-image: também podemos adicionar imagens como marcadores
+
+DIMENSÃO E ALINHAMENTO
+Width/Height
+Max-width/Max-height 
+Margin 
+Text align
+
+
+CSS GERAL 
+alinhar com: text-align e valores left, right, center e justify
+borda: podemos alterar largura, cor e estilo
+padding: 11px 11px;
+border-radius: arredondar cantos de elementos 
+regra CSS é formada por: um seletor ou grupo de seletores e por pelo menos uma declaração, que é formada por uma propriedade e um valor 
+4 áreas do box-model: content, padding, border, margin
+auto: ajuda a alinhar elementos horizontalmente na propriedade margin 
+é possível adicionar imagens aos marcadores de uma lista com a propriedade list-style-image 
+INCORRETO: IDs podem ser usados várias vezes em uma página 
+font-transform não existe 

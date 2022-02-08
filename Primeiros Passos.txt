@@ -1,0 +1,134 @@
+HISTÓRIA DA COMPUTAÇÃO
+área de avanços cumulativos
+base em pesquisas anteriores
+surgimento de novos paradigmas
+Hardware é o fundamento
+objetivos: 
+-minimizar esforços
+-otimizar recursos
+Ábaco - um dos primeiros dispositivos de cálculo (Babilonia - 3mil a.c.)
+a história da computação se mistura com a da matemática
+Quadrante - cálculo astronômico e navegação (aprimorado sec XVI)
+Ciência da Computação(II Guerra)
+
+Berço da Computação
+Alan Turing (1912-1954): 
+-pai da computação 
+-início da revolução computacional
+-definiu o conceito de algoritmo
+-tentou caracterizar operações computáveis
+-máquina baseada em sistema formal
+-Inteligência Artificial (1950)
+-Codificação -> operações de computador -> hardware -> matemática
+Máquina de Turing:
+-símbolos processados por computo: símbolos -> ações 
+-operações modificam o estado do sistema 
+Decifrar códigos de Guerra
+Projeto Delilab
+Claude Shannon:
+-percebeu a vasta aplicabilidade da lógica booleana
+-computadores digitais: conceitos + lógica --> base dos computadores atuais
+-compressão de dados
+-criptografia
+Von Newmann
+-construção de hardware 
+-teoria da computação
+-computação científica
+-programação
+-Arquitetura de Von Newmann: espaço de memória para armazenar dados e programa 
+-ACE: Automatic Computing Engine
+
+
+INSTRUMENTOS COMPUTACIONAIS 
+primeira máquina foi destruída no tempo e apenas se encontrou sua documentação histórica 
+"Primeira Máquina":Blaise Pascal -> auxiliar no cálculo de imposto
+Arithmometer: Charles Xavier Thomas(1820) -> operações básicas
+1837: 
+-Charles Babbage descreve uma máquina com funcionalidades de um computador 
+-surge a ideia de programação com Charles Babbage
+Conceito de Software: diferentes funções + conjuntos mutáveis 
+-> como executar essas instruções? através de codificação, programação codificada
+Ada Augusta Lovelace(1815-1852):
+-primeira programadora
+-instruções para calculador analítico
+-patrona da ciência da computação
+Herman Hollerith
+-criou uma máquina de calcular 
+-criou a Hollerith Tabuleting Machines, empresa que faria parte da IBM 
+-máquina que pudesse interpretar, classificar e realizar operações representadas pelas perfurações
+-acelerou o censo americano 
+
+PRIMEIROS COMPUTADORES 
+Z1
+-unidades básicas: memória, controladora e dispositivo para cálculo 
+-precisava de 1000 válvulas
+Z2
+-relés 
+Z3
+-relés e núcleos de ferrite
+-3 a 4 operações por segundo
+-5 segundos para processar multiplicações 
+IBM  + Harvard
+-Automatic Sequence Controller Calculator // Harvard Mark I 
+-modificação de instruções dinâmicas
+-unidade de decisão - algoritmo 
+-memórias separadas para instruções e dados 
+ENIAC - Eletronic Numeral Integrator and Computer - 1o computador de fato 
+-formato em U 
+-memórias gigantescas (80x8.5 pés)
+-registradores - 2 pés 
+-18 mil válvulas
+-programável 
+EDVAC - Eletronic Discrete Variable Automatic Computer 
+-programa armazenado 
+-segue o ENIAC em 1954 
+COLOSSUS
+-25k char/seg 
+
+COMPUTADORES PESSOAIS 
+1975
+-primeiro computador pessoal
+-sem interface gráfica
+-possibilita inserir instruções 
+-intel 
+Bill Gates + Paul Allen: criação da linguagem Basic 
+1976:
+-primeiro computador da apple
+1977:
+-Apple II é um sucesso de vendas (4k em 3 meses) e já apresenta monitor e teclado 
+1981:
+-IBM-PC 
+-arquitetura aberta // opensource
+
+Historicamente:
+-alto consumo de recursos
+-programas de processamento de dados
+Engenharia de software: surge com a necessidade de projetos de desenvolvimento que otimizem recursos 
+
+LÓGICA DE PROGRAMAÇÃO 
+lógica é um tipo de estrutura que visa solucionar um problema
+lógica é parte da filosofia que trata das formas do pensamento em geral e das operações intelectuais que visam à determinação do que é ou não verdadeiro 
+lógica:
+-ordenação que segue convenções 
+-organização coesa 
+-forma de raciocínio
+-forma como desencandeiam acontecimentos 
+lógica de programação:
+organziação e planejamento das instruções, assertivas em um algoritmo, a fim de viabilizar a implantação de um programa 
+
+TÉCNICAS DE LÓGICA DE PROGRAMAÇÃO
+1)Linear 
+-modelo tradicional
+-não tem vínculo com: estrutura hierárquica ou com programação de computadores
+-problemas unidirecionais
+2)Estruturada 
+-facilitar escrita, entendimento, validação e manutenção de um programa
+3)modular 
+-decompor o problema em partes independentes
+-módulos são controlados por um conjunto de regras 
+-divisão do problema em 3 partes: dados de entrada, processo de transformação e dados de saída
+-simplificação 
+-decomposição do problema 
+-verificação do módulo 
+
+

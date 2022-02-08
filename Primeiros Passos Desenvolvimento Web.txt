@@ -1,0 +1,224 @@
+HISTÓRIA DA INTERNET 
+1969: Arpanet - departamento de defesa, primeiro e-mail 
+1982: universidades e Europa
+1987: liberado o uso comercial nos EUA 
+1992: CERN cria a WWW. Dados acessíveis a qualquer pessoa com acesso à internet 
+Brasil:
+1988: faculdades
+1994: uso comercial, EMBRATEL libera conexão discada
+2000: banda larga
+
+REDES 
+Backbone 
+-espinha dorsal
+-poucas
+-espalhadas pelo mundo
+Provedor de Acesso:
+-empresas telefônicas que oferecem o acesso ao backbone 
+-contratam o sinal do backbone e repassam ao usuário final 
+Provedor de Serviço:
+-dial-up
+-ADSL(banda larga)
+-fibra ótica
+-rádio
+-satélite
+-móvel
+-P2P(peer to peer)
+Caminho Inverso:
+-www 
+-DNS 
+-IP(internet protocol)
+-classes de redes 
+-127.0.0.1
+
+TCP/IP 
+Transmission Control Protocol 
+Internet Protocol 
+protocolos de comunicação entre computadores
+modelo de camadas
+4 camadas:
+1)física(ex:placa de rede)
+2)rede(ex:IP)
+3)transporte(TCP,UDP)
+a)UDP:
+-rápido
+-não confiável
+-livestreams (exemplo de utilidade)
+b)TCP:
+-voltado à conexão, porém um pouco mais lento 
+-handshake 
+-integridade, ordem dos dados 
+-aplicativo de mensagens de texto
+4)aplicação(FTP,SMTP,HTTP)
+
+PORTAS(PORTS) 
+portinhas por onde os dados sairão e chegarão
+dados não podem entrar e sair sem saber de onde vêm ou para onde vão 
+20:FTP - envio de arquivos 
+22:SSH - conexão segura entre 2 computadores para executar comandos
+25:SMTP - envio de emails 
+53:DNS - tradutor de nome pra IP
+80:HTTP - requisição simples pra internet
+443: HTTPS - requisição segura pra internet
+
+MODEMS 
+Modulator-demodulator 
+hardware que convete dados em um formato que possa ser transmitido de um computador para outro e lido por outro
+
+ROTEADORES
+hardware que distribui a internet para um oou mais dispositivos de uma rede 
+pode fazer a comunicação entre redes 
+pode ser "burro" e mandar os dados recebidos para todos os usuários -> desperdício e sobrecarga de dados
+
+SWITCHES
+distribui internet para um ou mais dispositivos de uma rede
+criado para ser "inteligente"
+
+DADOS MÓVEIS 
+1G: analógico, 10kbps
+2G: digital, 97kbps, GSM 
+"2.5G": 32-80 kbps - dados + voz, GPRS
+"2.75G": 128-236kbps, EDGE 
+3G: 7mbps
+4G: 22,1mbps
+5G: 10gbps
+
+WI-FI 
+IEEE 802.11: 2.4GHz, 2mbps
+IEEE 802.11a: 5GHz, 54mbps
+IEEE 802.11b: 2.4GHz, 11mbps (diminuição de interferência)
+IEEE 802.11g: 2.4GHz, 54mbps 
+IEEE 802.11n: 2.4/5GHz, 150-600mbps
+Segurança:
+WEP: chaves de 64 e 128bits
+WPA: chave trocada periodicamente
+WPA2(AES)(802.11i): mais segurança, mas requer mais processamento 
+
+BLUETOOTH 
+conexão ponto-a-ponto
+não depende da internet pra funcionar
+3 classes - quanto maior a classe, menor a potência e o alcance
+5 versões - quanto maior a versão, maior a taxa de transmissão 
+
+BROWSER
+identifica linguagens de programação, linguagens de marcação e conteúdo multimídias
+plugins e addons ajudam na navegação 
+cache
+cookies
+página estática x dinâmica 
+
+SITE 
+página da internet que pode ser construídas em diversas LP 
+D/XHTML estão caindo em desuso
+
+APLICATIVO 
+software que é executado no navegador 
+um aplicativo de celular é uma espécie de navegador 
+quase não há diferença entre site e aplicativo, e o primeiro está em declínio
+diferença entre software e aplicativo está diminuindo
+
+WEBSERVER
+onde ficam guardados os dados da internet
+
+1)estático
+-servidor físico onde são armazenados arquivos, softwares e bancos de dados 
+2)dinâmico 
+-softwares que estão presentes no servidor físico 
+a)file server: arquivos 
+b)application server: aplicações 
+c)database: banco de dados 
+d)tudo junto - o mais comum 
+um site, aplicativo, dado ou banco de dados precisa estar hospedado em um servidor para ser acessado
+
+WEB-SERVICE
+interface disponível para fazer requisições e consultas em bancos de dados inacessíveis 
+
+STACKS 
+pilhas de tecnologia
+conjunto de softwares necessários e suficientes para executar um programa/aplicativo
+pode incluir as LPs da empresa
+ambientes e ferramentas de interação com o app/sw 
+capacidade e limitação de performance
+pontos fortes e fracos do app/sw 
+
+A)FRONT-END 
+parte da frente 
+site, sw, app, web service 
+interface, ui, ux 
+lógica de programação
+html (linguagem de marcação, não é LP) 
+css 
+jquery/js/ajax
+php
+bootstrap e outros frameworks
+
+B)BACK-END
+parte de trás
+servidores, bancos de dados
+meio-de-campo entre interface e bancos de dados, regras de negócios e validações 
+mysql, oracle, php, java, node.js 
+protocolos de comunicação 
+
+C)FULLSTACK
+profissional que sabe trabalhar em todas as camadas das tecnologias de desenvolvimento/execução de um app/sw 
+
+LINGUAGENS DE PROGRAMAÇÃO E MARCAÇÃO 
+HTML - linguagem de marcação 
+CSS - folhas de estilo, linguagem de marcação
+JavaScript(jQuery, AJAX e diversas libs)
+PHP 
+.NET 
+ASP 
+Java 
+Ruby (on Rails)
+Python
+Perl 
+C/C++/C#
+
+API 
+funcionalidade extra que se adiciona ao site para executar nova função
+
+BOOTSTRAP 
+um dos frameworks JS mais usados atualmente
+
+BREAKPOINTS
+a)pontos-chave quando se monta uma tela para dispositivos diferentes 
+b)pontos de parada do debug 
+
+DEPLOY 
+pacotinho enviado para publicação após a finalização parcial ou completa de um software 
+
+DESIGN ADAPTATIVO/RESPONSIVO 
+site que se adapta a qualquer proporção de tela 
+
+FAVICON 
+figurinha que representa o site 
+
+META TAGS 
+tags html que ficam dentro do header e têm funções específicas
+
+MVC
+Model, View, Controller
+arquitetura de software que separa:
+a)model: estrutura de dados 
+b)view: parte da frente
+c)controller: lógica de programação 
+
+MVP 
+mínimo produto viável para disponibilizar para cliente ou teste
+
+WYSIWYG
+what you see is what you get 
+
+
+GERAL 
+switch 
+WEP2 é a mais indicada, pois é a mais segura atualmente e o poder computacional que temos hoje torna irrelevante seu maior custo computacional
+HTML não é uma linguagem de programação
+INCORRETO: um profissional back-end trabalha exclusivamente com os servidores físicos 
+INCORRETO: para inserir código PHP em uma pagina web é preciso usar as tags <?php e php?> 
+FTP, SSH, HTTP, HTTPS, POP3 e IMAP são exemplos de protocolos de comunicação entre cliente e servidor 
+X em XAMPP:sistema operacional
+PHP é executado no lado do servidor 
+INCORRETO: JS é uma linguagem script baseada na linguagem Java 
+127.0.0.1 = localhost

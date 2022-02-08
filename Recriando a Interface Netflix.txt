@@ -1,0 +1,9 @@
+definir as cores principais do site como variáveis,
+para não precisar trocá-las em vários lugares
+
+classe wrapper: div feita pra englobar as coisas dentro
+
+a página é carregada em ordem sequencial
+se o javascript for carregado primeiro, pode apresentar algum erro
+então é interessante deixar o javascript ao final do código
+
