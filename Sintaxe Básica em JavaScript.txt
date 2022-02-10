@@ -1,0 +1,169 @@
+JS 
+linguagem de programação de alto nível 
+integra o  desenvolvimento de apps e páginas web
+c
+ria scripts dinamicos que realizam a interação de apps ou paginas web 
+é a parte interativa do desenvolvimento
+
+HTML: estrutura
+CSS: design
+JS: interação
+
+Brendan Eich 
+Mocha -> LiveScript -> JavaScript
+jogada de marketing pq Java era muito popular na época 
+
+! -> cria o esqueleto do documento HTML 
+ctrl + clink no arquivo -> opção de ir até o arquivo ou criá-lo caso ele não exista
+
+
+BOAS PRÁTICAS 
+-externar o arquivo de script 
+-carregar o script ao final do body
+
+TIPAGEM 
+regra de uso de dados 
+quanto mais forte, mais obrigatória é a declaração do tipo de dado 
+JS: 
+-tipagem fraca 
+-declaração dinâmica
+ex: criando entre aspas, ele entende como string, se criado com numero, entende como number
+
+TIPO PRIMITIVOS 
+boolean, null, undefined, number, string, array, object, function 
+
+3 modos de declaração de variáveis:
+1) var 
+escopo global e local 
+pode ter seu valor alterado
+sem valor inicial -> tratada como null 
+2) let 
+escopo local de bloco -> por convenção
+pode ter seu valor alterado 
+sem valor inicial -> tratada como null 
+3) const
+escopo local de bloco
+somente leitura 
+valor inicial é obrigatório 
+valor inicial não pode ser alterado 
+
+ESCOPO 
+define a limitação e visibilidade de um bloco de código 
+
+1)GLOBAL 
+quando a variável é declarada fora de qualquer bloco, sua visibilidade fica disponível em todo o código 
+2)LOCAL 
+quando a variável é declarada dentro de um bloco, sua visibilidade pode ficar disponível ou não 
+
+REGRAS DE USO DE VARIÁVEIS 
+- iniciar com letras, underscore ou $, não com número
+- não usar espaço, usar camelCase ou _
+- não usar palavras reservadas 
+- declarar variáveis no topo do bloco de código 
+
+ATRIBUIÇÃO 
+=
+COMPARAÇÃO 
+==
+=== -> compara não apenas o valor, mas também o tipo
+
+OPERADORES ARITMÉTICOS, RELACIONAIS E LÓGICOS
++
+-
+*
+/
+%
+**
+> 
+<
+>=
+<=
+&&
+||
+!
+
+VETORES // ARRAYS
+são um tipo de lista
+matriz de variáveis 
+cada variável possui um índice
+os valores podem ser de vários tipos
+deve ser declarado entre colchetes 
+pode guardar qualquer valor
+pode guardar arrays 
+
+MANIPULANDO ARRAYS 
+.forEach() - itera um array;
+.push() - adiciona item no final do array;
+.pop() - remove item no final do array;
+.shift() - remove item no início do array;
+.unshift() - adiciona item no início do array;
+.indexOf() - retorna o índice de um valor;
+.splice() - remove ou substitui um item pelo índice 
+.slice() - retorna uma parte de um array existente;
+
+OBJETOS
+dados que possuem propriedades e valores que definem suas características
+devem ser declarados entre chaves
+
+Desestruturação:
+atribuir as propriedades dos objetos a variáveis, facilitando sua manipulação
+pode ser feita utilizando chaves 
+
+ESTRUTURAS CONDICIONAIS
+instruções para realizar determinadas tarefas a partir de uma condição, seja de decisão ou repetição 
+aninhamento de ifs 
+if ternário
+
+LAÇOS DE REPETIÇÃO 
+estruturas condicionais que repetem uma instrução até atingir determinada condição 
+
+for/in: 
+-repetição a partir de uma propriedade
+for/of: 
+-repetição a partir de um valor 
+-não funciona com objetos pois as propriedades variam (diferente do índice de um array que sempre serão números inteiros)
+-mas é possível funcionar a partir de uma prpriedade 
+
+while - verificação é feita ANTES da execução 
+do while - verificação é feita DEPOIS da execução
+
+FUNÇÕES
+blocos de comandos e instruções para a execução de determinadas tarefas 
+() -> indica que é um objeto do tipo function 
+{} -> indica que é um bloco de instrução
+
+TIPOS DE FUNÇÕES
+1) Função declarativa
+possui o uso mais comum 
+o nome da função é obrigatório
+deve ser declarada usando:
+function nomeFuncao(){instrução}
+2) Expressão de funções 
+funções atribuídas a expressões 
+a nomeação da função é opcional 
+ex:
+var funcao = function nomeFacultativo(){instrução}
+var funcao = function(){instrução}
+3) Arrow Function 
+funções de expressão de sintaxe curta 
+sempre será anônima 
+declaração:
+var funcao = () => {instrução}
+
+MÉTODOS NATIVOS JS (alguns)
+Number() - converte valores em números 
+prompt() - registrar entradas de usuário 
+alert() - mostrar mensagem ao usuário 
+Template Strings - para usar strings junto com expressões
+
+GERAL
+switch(a){ case a = 1; console.log(); break; case a =2; console.log(); break; default: console.log();}
+shift() -> remvoe o primeiro item da array 
+referenceError
+1, false, "olá"
+const constante = 1;
+console.log(array[3])
+var variavelQualquer;
+objetos são dados que possuem propriedades e valores que definem suas características. Deve ser declarado entre chaves {}
+funções: deve ser declarada usando a palavra reservada function seguida de parênteses() e chaves {}
+

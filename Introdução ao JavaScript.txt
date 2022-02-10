@@ -1,0 +1,135 @@
+JAVASCRIPT
+interpretada - o browser tá rodando o código em tempo real e o código está sendo disponibilizado instantaneamente
+baseada em protótipos
+multiparadigma - permite escolher entre programação funcional, estruturada e POO 
+comumente utilizada em aplicações web client-side
+segue o padrão ECMAScript
+
+Protótipos:
+base para uma grande quantidade de estrutura de dados do javascript
+conjunto de possibilidades em comum para essas estruturas
+
+Client-Side:
+parte da aplicação que tem interação com o usuário
+
+ECMAScript:
+conjunto de normas que informa quais funcionalidades são oficialmente lançadas naquela linguagem
+
+1997:
+1a edição
+ECMAScript 1
+
+1998:
+ECMAScript 2 
+apenas mudanças editoriais 
+
+1999:
+ECMAScript 3
+expressões regulares
+try/catch
+ECMAScript 4 nunca é lançado
+
+2009:
+ECMAScript 5 
+strict mode
+JSON support
+String.trim()
+Array.isArray()
+métodos de iteração de Array 
+
+2015:
+ECMAScript 6
+muitas atualizações
+arrow functions
+jeitos novos de concatenar variáveis
+
+Aplicações:
+web
+mobile
+smartwatches 
+games
+internet of things
+APIs 
+
+Comentario em JS:
+// comenta linha 
+/* 
+comenta várias linhas
+*/
+atalho: ctrl+barra 
+
+Variável (var):
+valor que muda dependendo das condições 
+
+
+Constante (const):
+valor fixo, que não se altera 
+em geral, declarada com maiúsculas
+
+ctrl shift i => abrir ferramentas de desenvolvedor no navegador 
+
+NODE.JS
+ferramenta que ajuda a rodar o JS do lado do servidor/desenvolvedor
+
+INDEX.HTML
+é o arquivo que dá acesso às diferentes páginas do projeto
+
+Arquitetura: 
+forma como estão estruturados os arquivos do projeto 
+
+Pasta assets:
+ferramentas disponíveis, arquivos que não são HTML 
+
+CSS
+incorporado no html pela tag link, que tem 2 atributos:
+atributo rel: relacionamento que existe entre o arquivo chamado e o arquivo que chama 
+atributo href: localiza o arquivo
+
+JS 
+incorporado no html pela tag script
+argumento src: localiza o arquivo
+
+DOM 
+document object model 
+mostra o que há disponível para o documento 
+estrutura dos elementos dentro da janela
+Árvore DOM
+-Window:
+--History
+--Location
+--Document:
+---Heading Level 1
+---Paragraph
+---Heading Level 2
+---Anchor
+
+
+FRAMEWORKS e BIBLIOTECAS
+são ferramentas que aumentam a facilidade e a rapidez do desenvolvimento em JS
+VueJs
+Angular
+React 
+jQuery
+
+MERCADO DE TRABALHO 
+MDN web docs -> documentação do mozila 
+W3C -> tudo sobre internet 
+stack overflow -> resolver dúvidas
+youtube
+linkedin
+github
+DIO 
+twitter
+
+GERAL 
+JS é a linguagem que os browsers entendem
+JS NÃO é compilada
+em projetos pequenos: arquivos JS e CSS na pasta assets
+variáveis são valores din^micos e constantes são valores que não mudam 
+<script> importa arquivo JS 
+Console: é possível utilizá-lo no navegador nativamente e no terminal instalando o Node.JS 
+node: comando para executar arquivos JS no terminal 
+JS é uma linguagem de programação e o ECMAScript é um padrão utilizado tanto por ela quanto por outras linguagens 
+atualizações do ECMAScript acontecem anualmente 
+nada, pois a função foi apenas declarada, e não invocada
+
