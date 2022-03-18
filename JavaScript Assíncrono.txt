@@ -1,0 +1,142 @@
+ASSINCRONICIDADE
+que não ocorre ou não se efetiva ao mesmo tempo
+
+por padrão JS roda de maneira síncrona:
+Cliente faz a requisição e aguarda pela resposta so servidor
+na sequência, pode fazer outra requisição 
+
+no assíncrono:
+Cliente faz a requisição e pode continuar trabalhando enquanto o servidor recebe a requisição e devolve a informação
+cliente recebe a resposta e faz algo com ela
+
+
+PROMISES 
+objeto de processamento assíncrono 
+inicialmente, seu valor é desconhecido
+então ela pode ser resolvida ou rejeitada
+
+Pending     Resolved    Pending
+Promise -> .then()  -> Promise
+        -> .catch() -> 
+            Rejected
+
+pode ter 3 estados:
+1) Pending
+2)Fulfilled 
+3)Rejected
+
+ex1:
+const myPromise = new Promise((resolve, reject) => {
+    window.setTimeout(() => {
+        resolve(console.log('Resolvida!));
+    }, 2000); //2 segundos
+});
+
+é possível encadear chamadas
+
+ex2: 
+const myPromise = new Promise((resolve, reject) => {
+    window.setTimeout(() => {
+        resolve(console.log('Resolvida!));
+    }, 2000); //2 segundos
+});
+await myPromise
+.then((result) => result + ' passando pelo then')
+.then ((result) => result + ' e agora acabou!)
+.catch((err) => console.log(err.message));
+
+Async/await 
+funções assíncronas precisam dessas duas palavras chave 
+
+async: define funções assíncronas
+await: para o código para aguardar a função ser resolvida
+
+ex:
+async function resolvePromise(){
+    const myPromise = new Promise((resolve, reject) => {
+        window.setTimeout(() => {
+            resolve(console.log('Resolvida!));
+        }, 2000); //2 segundos
+    });
+    const resolved = await myPromise
+        .then((result) => result + ' passando pelo then')
+        .then ((result) => result + ' e agora acabou!)
+        .catch((err) => console.log(err.message));
+    
+    return resolved;
+}
+
+Try/Catch 
+é possível usar try/catch nas promises 
+
+ex: 
+async function resolvePromise(){
+    const myPromise = new Promise((resolve, reject) => {
+        window.setTimeout(() => {
+            resolve(console.log('Resolvida!));
+        }, 2000); //2 segundos
+    });
+    let result;
+    try{
+    result = await myPromise
+        .then((result) => result + ' passando pelo then')
+        .then ((result) => result + ' e agora acabou!)
+    } catch(err){ 
+        result = err.message;
+        } 
+    
+    return result;
+}
+
+APIs 
+Application Programming Interface
+é uma forma de intermediar os resultados do back-end com o que é apresentado no front-end 
+é possível acessá-la por meio de URLs
+
+Database <--> API <--> web/mobile apps / other APIs
+
+JSON
+JavaScript Object Notation
+pe muito comum que APIs retornem seus dados no formato .json 
+
+
+Método fetch()
+consumir APIs 
+realiza operações no banco de dados (POST, GET, PUT, DELETE etc)
+retorna uma promise (então precisa do catch)
+
+ex01:
+fetch(url, options)
+    .then(response => response.json())
+    .then(json => console.log(json))
+ 
+ex02:
+fetch('https://endereco-api.com/', {
+    method: 'GET',
+    cache: 'no-cache',
+})
+     .then(response => response.json())
+    .then(json => console.log(json))
+
+ex03:
+fetch('https://endereco-api.com/', {
+    method: 'POST',
+    cache: 'no-cache',
+    body: JSON.stringify(data)
+})
+     .then(response => response.json())
+    .then(json => console.log(json))
+
+
+GERAL 
+A 1a função não é assíncrona e a 2a é. A maneira correta de lidar com Promises é a segunda 
+API - Application Programming Interface, interface que possibilita a comunicação entre plataformas 
+INCORRETO: não é possível saber se uma Promise foi rejeitada
+JSON: JavaScript Object Notation, é um formato de troca de informações, muito utilizado na comunicação de front-ends com APIs
+Promises: é necessário utilizar o operador await para obter seu resultado 
+Promise: objeto JavaScript que possui 3 estados: pendente, resolvido e rejeitado 
+método fetch: retorna uma Promise 
+I, II
+Olá, tudo bem?
+await: operador específico para lidar com promises 
+

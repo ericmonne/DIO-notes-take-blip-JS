@@ -1,0 +1,106 @@
+DEBUGGING E ERROR HANDLING 
+erro é uma exceção que acontece em um contexto diferente 
+
+ECMAScript ERROR 
+erro que acontece em tempo de execução 
+composto por:
+-mensagem
+-nome
+-linha
+-call stack 
+
+DOMException
+exceção que acontece no DOM (Document Object Model)
+acontece ao relacionar o código JS a uma página da web
+
+TRATANDO OS ERROS 
+
+THROW
+mostra o erro no console 
+return mostraria a mensagem, não o erro 
+
+ex: 
+function verificaPalindromo(string){
+    if(!string) throw/return 'String inválida';
+    return string === string.split('').reverse.join('');
+}
+
+TRY...CATCH 
+declaração em que dentro do bloco try verifica-se um bloco de código 
+se houver algum erro, será tratado/capturado na função catch 
+na função catch, pode-se manipular o erro e suas propriedades de maneira organizada de acordo com as necessidades do código
+
+ex1: 
+function verificaPalindromo(string){
+    if(!string) throw 'String inválida';
+    return string === string.split('').reverse.join('');
+}
+function tryCatchExemplo(string){
+    try {
+        verificaPalindromo(string)
+    }
+    catch(e){
+        console.log(e)
+    }
+}
+tryCatchExemplo('');
+
+ex2:
+function verificaPalindromo(string){
+    if(!string) throw 'String inválida';
+    return string === string.split('').reverse.join('');
+}
+function tryCatchExemplo(string){
+    try {
+        verificaPalindromo(string)
+    }
+    catch(e){
+        throw e;
+    }
+}
+tryCatchExemplo('');
+
+
+FINALLY 
+instrução chamada quer haja erro ou não 
+
+ex:
+function verificaPalindromo(string){
+    if(!string) throw 'String inválida';
+    return string === string.split('').reverse.join('');
+}
+function tryCatchExemplo(string){
+    try {
+        verificaPalindromo(string)
+    }
+    catch(e){
+        throw e;
+    }
+    finally{
+        console.log('A string enviada foi: ' + string);
+    }
+}
+tryCatchExemplo('');
+
+
+OBJETO ERROR 
+erro tem 3 parâmetros opcionais
+erro pode ter um nome
+
+ex:
+new Error(message, fileName, lineNumber) // todos os parâmetros são opcionais e podem não ser aceitos em todos os browsers
+const MEU_ERRO = new Error('Mensagem Inválida');
+MEU_ERRO.name = 'InvalidMessage'; // exemplo de nome 
+throw MEU_ERRO;
+
+GERAL 
+ECMAScript é um tipo de erro em tempo de execução e o DOM Exception é um erro referente ao DOM 
+catch: possibilidade de manipular o tratamento de um erro com maior flexibilidade
+composição ECMAScript Error: mensagem, nome, linha e callstack
+const MEU_ERRO = new Error();
+outro tipo de erro 
+catch: é executado apenas quando ocorre um erro e possibilita a manipulação de um objeto Error 
+try...catch: dentro do bloco try são executadas instruções e caso ocorra algum erro durante o processo, ele será tratado no bloco catch
+Novo Erro: Este erro nunca ocorreu 
+Throw lança um erro, enquanto return retorna um valor 
+finally: é executada sempre, independente de erros ocorrerem ou não 

@@ -1,0 +1,69 @@
+PARADIGMAS 
+
+1)Imperativo
+foca em como resolver os problemas
+a)procedural
+b)orientação a objetos
+c)processamento paralelo
+
+2)Declarativo
+foca no que será feito
+a)lógico
+b)funcional / fluxo de dados
+c)banco de dados 
+
+POO 
+os programas são objetos que possuem uma série de propriedades
+
+Pilares:
+1)Herança
+o objeto filho herda propriedades e métodos do objeto pai, 
+mas pode ter suas próprias características
+
+2)Polimorfismo
+objetos podem herdar a mesma classe pai, mas se comportarem de forma dierente quando invocamos seus métodos 
+
+3)Encapsulamento
+cada classe tem propriedades e métodos independentes do restante do código
+
+4)Abstração
+processo mental que consiste em isolar um aspecto determinado de um estado de coisas relativamente complexo
+a fim de simplificar a sua avaliação, classificação ou para permitir a comunicação do mesmo
+
+
+OOJS 
+
+PROTÓTIPOS
+são o esqueleto de todos os objetos
+todos os objetos JS herdam propriedades e métodos de um prototype 
+o objeto Object.prototype está no topo desta cadeia 
+
+CLASSES 
+não existem nativamente
+todas são objetos e a herança se dá por protótipos 
+Syntatic sugar: uma sintaxe feita pra facilitar a escrita
+sempre tem um construtor 
+método super manda pra função pai os parâmetros que estão em ()
+
+com getter e setter, é boa prática colocar _ na frente do nome
+ex:
+this._saldo
+get saldo() { return this._saldo}
+set saldo(valor) {this._saldo = valor}
+
+GERAL 
+Polimorfismo - o conceito de que classes mais complexas herdem métodos de classes mais abstratas e os executem à sua maneira 
+4 pilares: abstração, herança, encapsulamento e polimorfismo 
+Abstração - diminuir complexidade
+getters e setter: nomeado com o sinal _ como prefixo 
+I, II e III 
+JS utiliza Herança Prototipada
+Funções dentro de um objeto são chamadas de métodos 
+Herança - classes descendentes herdam características de suas classes ascendentes 
+método super: passa os argumentos enviados para a classe ascendente 
+Encapsulamento - propriedades e métodos de uma classe dizem respeito apenas a ela 
+protótipos: são responsáveis pelo conceito de herança em JS 
+I e II 
+o método super pode ser utilziado em classes que herdam propriedades de outras
+getters e setters são utilizados como modificadores de um valor
+

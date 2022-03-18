@@ -1,0 +1,305 @@
+ESTRUTURA
+function nomeFuncao(parametros opcionais){instruções}
+variáveis criadas dentro de uma função apenas podem ser utilizadas dentro dela 
+return: quando é invocado, interrompe a função e retorna algo 
+
+FUNÇÃO ANÔNIMA
+funções que representam expressões
+uma variável pode armazenar uma função 
+função sem nome atribuída a uma variável 
+ex:
+const soma = function(a,b){
+    return a+b;
+}
+soma(1, 2) //3
+soma(5, 4) //9
+
+FUNÇÃO AUTOINVOCÁVEL 
+IIFE - Immediately Invoked Function Expression 
+uma função anônima entre parênteses, seguida por outro par de parênteses, que representa sua chamada
+
+ex:
+(
+    function(){
+        let name = "Digital Innovation One";
+        return name;
+    }
+)(); --> esse parênteses chama a função 
+
+também pode ser utilizada com parâmetros:
+(
+    function(a, b){
+        return a+b;
+    }
+)(1, 2); 
+
+também pode ser armazenada em uma variável:
+const soma3 = (
+    function(){
+        return a + b;
+    }
+)(1, 2);
+
+
+CALLBACKS
+função passada como argumento para outra função 
+permitem maior controle da ordem de chamadas 
+
+ex:
+const calc = function(operacao, num1, num2){
+    return operacao(num1, num2);
+}
+const SOMA = function(num1, num2){
+    return num1 + num2;
+}
+const SUB = function(num1, num2){
+    return num1 - num2;
+}
+const RESULT_SOMA = calc(soma, 1, 2);
+const RESULT_SUB = calc(sub, 1, 2);
+
+
+PARÂMETROS 
+Valores Padrão 
+usados por default quando não for inserido um valor pelo usuário 
+
+ARGUMENTS 
+um array/collection com todos os parâmetros passados quando a função foi invocada 
+bom para número indefinido de argumentos em uma função
+
+ex:
+function findMax(){
+    let max = -Infinity;
+    
+    for(let i = 0; i< arguments.length; i++){
+        if (arguments[i] > max){
+            max = arguments[i];
+        }
+    }
+    return max;
+}
+findMax(1, 2, 3, 6, 80, 1); //80
+
+ARRAYS: SPREAD
+uma forma de lidar separadamente com elementos 
+o que era parte de um array setorna um elemento independente
+
+ex:
+function sum(x,y,z){
+    return x + y + z;
+}
+const NUMBERS = [1,2,3];
+console.log(sum(...NUMBERS)) -----> spread: (...nomeVariavel)
+
+ARRAYS: REST 
+combina os argumentos em um array 
+o que era um elemento independente se torna parte de um array 
+basicamente, é o contrário do spread
+
+ex:
+function confereTamanho(...args){
+    console.log(args.length);
+}
+confereTamanho(); //0
+confereTamanho(1,2); //2
+confereTamanho(3,4,5); //3
+
+OBJETOS: OBJECT DESTRUCTURING 
+filtra entre chaves {} apenas os dados que interessam 
+
+ex:
+const user ={
+    id: 42;
+    displayName: 'jdoe';
+    fullName: {
+        firstName: 'John";
+        lastName: 'Doe';
+    }
+}
+
+function userId({id}){
+    return id;
+}
+function getFullName({fullName: {firstName: first, lastName: last}}){
+    return `${first} ${last}`;
+}
+userId(user) //42;
+getFullName(user) //John Doe;
+
+
+IF/ELSE 
+pode comparar apenas tipo ou tipo e valor 
+aninhamento de if/else se faz com else if (separado)
+
+exemplo de refatoração para boas práticas e facilitação da leitura do código:
+
+A)
+function numeroPositivo(num){
+    let resultado;
+    
+    if(num<0){
+        resultado = false;
+    }else {
+        resultado = true;
+    }
+    return resultado
+}
+
+B)
+function numeroPositivo(num){
+    let resultado;
+
+    const EH_NEGATIVO = num < 0;
+
+    if(EH_NEGATIVO){
+        resultado = false;
+    } else {
+        resultado = true;
+    }
+    return resultado;
+}
+
+C)
+function numeroPositivo(num){
+    const EH_NEGATIVO = num <0;
+    if(EH_NEGATIVO){
+        return false;
+    }
+    return true;
+}
+
+SWITCH/CASE 
+equivale a uma comparação de tipo E valor (===)
+valor DEFAULT é obrigatório
+ideal para quando se precisa comparar muitos valores
+
+switch(argumento){
+    case valor:
+        return "retorno";
+        break;
+    default:
+        return "outro retorno";
+}
+
+FOR
+loop dentro de elementos iteráveis 
+
+for (índice, condição de continuidade, incremento){
+    instruções
+}
+
+FOR... IN 
+loop entre propriedades enumeráveis de um objeto 
+
+ex:
+function forInExemploA(obj){
+    for(prop in obj){
+        console.log(prop)
+    }
+}
+function forInExemploB(obj){
+    for(prop in obj){
+        console.log(obj[prop])
+    }
+}
+const meuObjeto = {
+    nome: "Eric",
+    idade: "32",
+    cidade: "Niterói"
+}
+
+forInExemploA(meuObjeto) //nome \n //idade \n //cidade 
+forInExemploB(meuObjeto) //Eric \n //32 \n Niterói
+
+FOR OF 
+loop entre estruturas iteráveis (arrays e strings)
+
+ex: 
+for(letra of palavra){ console.log(letra) }
+
+WHILE 
+executa uma instrução até que a condição se torne falsa 
+condição é verificada ANTES de entrar no bloco 
+
+DO ... WHILE 
+executa uma instrução até que a condição se torne falsa 
+condição é verificada DEPOIS de entrar no bloco 
+logo, a primeira execução sempre ocorre 
+
+
+THIS 
+palavra reservada
+referência de contexto 
+seu valor pode mudar de acordo com o lugar no código onde foi chamada 
+
+            Contexto  - Referência
+a)em um objeto/método - próprio objeto dono do método 
+b)sozinha             - objeto global (em navegadores, window)
+c)função              - objeto global
+d)evento              - elemento que recebeu o evento 
+
+ex a:
+const pessoa = {
+    firstName: "Andrés",
+    lastName: "Iniesta",
+    fullName: function(){
+        return this.firstName + " " + this.lastName;
+    }
+}
+
+ex b:
+console.log(this) //node: {}
+//no console do navegador: window {0: global, window: window, self window, document: document, name: "", location: location, ..}
+
+ex c:
+(function (){
+    console.log(this);
+})();
+// node : mostra o objeto pai window  
+
+SEMPRE QUE UMA FUNÇÃO ESTÁ DENTRO DE UM OBJETO, É CHAMADA DE MÉTODO
+
+MÉTODOS THIS 
+.call(objeto) ->this passa a se referir ao objeto passado como parâmetro 
+ - é possível passar parâmetros para esse método separando-os por vírgulas
+.apply(objeto) -> funciona igual ao call, mas para passar argumentos, eles devem estar dentro de um array 
+.bind() -: clona a estrutura da função onde foi chamado e aplica o valor do objeto passado como parâmetro 
+ex:
+const retornaNome = function(){
+    return this.nome;
+};
+let ferran = retornaNome.bind({nome: 'Ferran'})
+ferran(); //Ferran
+
+
+ARROW FUNCTIONS 
+não fazem hoisting, então devem ser declaradas antes de serem chamadas
+nelas, this sempre seriam objetos globais -> seus métodos ão funcionam para modificar seu valor 
+não existe nelas objeto arguments
+não pode ser utilizado o construtor
+não é bom utilizá-las como métodos de objetos 
+
+quando possuem uma linha só, não é necessário colocar um retorno nem chaves {} 
+ex:
+const helloWorld = () => "Hello World";
+
+ex com parâmetros:
+const soma = (a,b) => a+b; 
+soma(4,6); //10
+
+caso exista apenas um parâmetro, pode dispensar os parênteses 
+ex: 
+const exemplo = a => a;
+
+GERAL 
+valor de this: depende do contexto no qual a palavra é invocada 
+método call: transforma o valor de this no do objeto enviado como 1o parâmetro e aceita outros parâmetros separados por vírgulas. É reutilizável em outros objetos 
+callbacks: funções passadas como parâmetros para outras funções
+método bind: cria um clone da função na qual for invocado, designando a this o valor do objeto passado como parâmetro
+a função possui um valor padrão 
+II e III - funções são determinadas pela palavra reservada function e podem retornar ou não algum valor 
+a partir do índice 0, enquanto o índice for menor que o tamanho do array, o código irá logar o elemento que estiver em cada índice do array 
+funções anônimas são funções sem um nome específico e que podem ter seu valor atribuído a uma variável
+INCORRETO: funções autoinvocáveis não podem receber parâmetros
+método apply: transforma o valor de this no do objeto enviado como 1o parâmetro e aceita outros parâmetros através de um array. É reutilizável em outros objetos 
+

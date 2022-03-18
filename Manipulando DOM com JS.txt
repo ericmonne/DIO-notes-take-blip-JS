@@ -1,0 +1,82 @@
+DOM - DOCUMENT OBJECT MODEL 
+padrão de como acessar e modificar os elementos HTML de uma página web
+está presente em todos os browsers
+nós que representam cada elemento do html de uma página 
+DOM é filho do BOM 
+
+BOM - BROWSER OBJECT MODEL 
+tudo o que está dentro de um objeto window
+(document, history, location, screen, navigator)
+
+ESTRUTURA HTML 
+tag -> explica o que representa aquela parte do código
+id -> identificadores únicos
+classe -> identificadores não-únicos 
+
+document.getElementById('id');
+document.getElementsByTagName('tag'); // retorna um array com todas as ocorrências da tag
+document.getElementsByClassName('nomeClasse'); // retorna um array independentemente do numero de elementos, com todas as occorrências
+document.querySelectorAll('.classe .outraClasse tag #id'); //retorna um array; buscaPersonalizada
+document.createElement(element) //cria novo elemento html 
+document.removeChild(element) // remove um elemento 
+document.appendChild(element) // adiciona um elemento 
+document.replaceChild(new, old) // substitui um elemento 
+
+ESTILOS 
+por meio de ids e classes e outros pseudoelementos, é possível selecioná-los e colocar estilo neles através do CSS 
+
+Element.classList 
+ex: 
+antes: <div id=meu-elemento" class="classe">
+const meuElemento = document.getElementById("meu-elemento")
+meuElemento.classList.add("novo-estilo") //adiciona a classe "meu estilo" 
+meuElemento.classList.remove("classe") // remove a classe "classe" 
+meuElemento.classList.toggle("dark-mode") // adiciona a classe "dark-mode" caso ela não faça parte da lista e remove ela caso faça 
+depois:<div id=meu-elemento" class="novo-estilo dark-mode">
+
+Acessando diretamente o CSS (no JS) de um elemento:
+document.getElementsByTagName("p").style.color = "blue";
+.style é a chave pra ir direto ao css do elemento selecionado
+
+EVENTOS 
+qualquer tipo de ação que o usuário faça ao interagir com algum elemento da página 
+
+1)Mouse
+-mouseover: hover em cima do elemento 
+-mouseout: quando o mouse sai do elemento 
+2)Clique 
+-click
+-dbclick: para cliques duplos
+3)Atualização
+-change 
+-load
+
+EVENT LISTENER 
+diretamente no JS, cria um evento que vai ser acionado no momento em que o usuário realizar determinada ação 
+
+ex1(JS):
+const botao = document.getElementById("meuBotao");
+botao.addEventListener("click", outraFuncao);
+
+ex2(HTML):
+<h1 onclick="mudaTexto(this)"Clique aqui!</h1>
+<script>
+    function mudaTexto(id){
+        id.innerHTML = "Mudei!";
+    }
+</script>
+
+para usar direto no html, tem q usar "on" na frente do nome do evento 
+
+
+GERAL 
+adicionar uma classe a um elemento HTML: element.classList.add('classe');
+selecionar o elemento <h1>Título principal</h1> document.getElementsByTagName('h1')[0]
+após selecionar um elemento, podemos acessar suas classes CSS pelo JS: .classList 
+DOM é a árvore de dependências do HTML, BOM é a árvore de dependências do Browser 
+eventos JS: podem ser programados via JS adicionando listeners aos elementos do DOM ou adicionando diretamente tags no HTML 
+tipos de eventos no JS: click, change, load e mouseover 
+remover uma classe a um elemento HTML: element.classList.remove('classe')
+selecionar o elemento <section id='sobre' class='full-screen'> : document.querySelectorAll('#sobre .full-screen')
+selecionar o elemento <p class='paragrafo'>Texto de apresentação</p>: document.getElementsByClassName('paragrafo')[0]
+DOM: é possível acessar os elementos HTML, seus elementos ascendentes e descendentes

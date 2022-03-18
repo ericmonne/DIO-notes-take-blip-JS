@@ -1,0 +1,78 @@
+MAP FILTER REDUCE 
+métodos para manipular valores de uma array 
+
+MAP 
+vem de mapping function 
+cria um novo array
+não modifica o array original
+realiza as operações em ordem
+
+Sintaxe:
+array.map(callback, thisArg)
+
+
+Callback:
+função a ser executada em cada elemento
+dentro dele, há acesso ao item, ao index e ao array modificado
+ex:
+callback(item, index, array) //pode ser passado apenas o item
+
+thisArg:
+valor de this dentro da função de callback
+é opcional
+não costuma ser utilizado
+
+
+MAP X FOREACH 
+considere se o array auxiliar será necessário para continuar as operações antes de escolher
+
+ex Map:
+const array = [1, 2, 3, 4, 5];
+array.map((item) => item *2); //retorno: [2,4,6,8,10];
+
+ex forEach:
+const array = [ 1, 2, 3, 4, 5];
+array.forEach((item) -> item*2); // retorno: undefined -> o array resultante da operação precisaria ser atribuído a uma constante para ser utilizado 
+
+FILTER 
+como se colocasse todo o array dentro de um funil que filtrasse apenas os itens que obedecessem a determinada condição 
+cria um novo array 
+não modifica o array original 
+
+Sintaxe:
+array.filter(callback, thisArg)
+
+ex:
+const FRUTAS = ['maçã fuji', 'maçã verde', 'laranja', 'abacaxi'];
+frutas.filter((fruta) => fruta.includes('maçã')) // retorno: ['maçã fuji', 'maçã verde']
+
+REDUCE 
+executa uma função em todos os elementos do array, retornando um valor ÚNICO 
+o valor pode ser um array, uma string, um número etc.
+
+Sintaxe:
+array.reduce(callbackFn, initialValue)
+
+Callback:
+função a ser executada a partir do acumulador
+olha para o acumulador e executa a função novamente nele
+ex:
+const callbackFn = function(accumulator, currentValue, index, array){
+    corpo da função
+}
+
+initialValue:
+valor sobre o qual o retorno irá atuar
+
+GERAL 
+map X forEach: o retorno: o método map retorna um array, enquanto forEach retorna undefined
+filter: sempre retorna um novo array 
+[1,2,3,4] 
+reduce: sempre retorna apenas um valor, que pode ou não ser um array 
+map: percorre o array e executa uma função em cada um de seus itens 
+10
+[2,4]
+filter: percorre um array e retorna outro contendo apenas os itens que passaram por determinada validação 
+map: sempre retorna um novo array
+reduce: percorre um array e acumula o valor de cada operação para retornar um valor único no final
+

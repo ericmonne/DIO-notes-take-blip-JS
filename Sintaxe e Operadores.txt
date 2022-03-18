@@ -1,0 +1,28 @@
+ATRIBUIÇÃO
++= -> x+=y -> x = x+y
+-= -> x-=y -> x = x-y
+*= -> x*=y -> x= x*y
+/= -> x/=y -> x= x/y
+%= -> x%=y -> x = x%y
+
+
+Atividade:
+Crie uma função que recebe dois números como parâmetros.
+Confira se os números são iguais.
+Confira se a soma dos números é maior que 10 ou menor que 20.
+Retorne uma string dizendo 
+"Os números num1 e num2 não/são iguais. 
+Sua soma é soma, que é maior/menor que 10 e maior/menor que 20".
+
+GERAL
+entre os operadores mais populares: aritmética, lógica, condicionais
+0
+na I ambas precisam ser verdadeiras, na II apenas uma 
+operadores aritméticos: /, % e *
+** = exponencial 
+num %2 === 0 -> verificar se um número é par
+!= -> verificar se dois valores são diferentes 
+envie um número válido!
+uma atribuição, uma comparação e uma comparação de valor e tipo 
+operador ternário e if else podem ser equivalentes
+

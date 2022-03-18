@@ -1,0 +1,166 @@
+CASETYPES 
+camelCase - mto usada em JS
+snake_case
+kebab-case 
+PascalCase
+UPPER_CASE_SNAKE_CASE - mto usado para constantes em JS 
+
+VAR X LET 
+camelCase
+var: escopo global ou local; pode ser redeclarado
+let: escopo local/deb bloco; não pode ser redeclarado, mas pode ser reatribuído
+conselho: utilizar mais let do que var
+ex:
+var a = 1;
+var b = 2;
+if (a===1){
+    var a = 11;
+    let b = 22;
+    console.log(a); //11
+    console.log(b); //22
+}
+console.log(a)//11
+console.log(b)//2
+
+HOISTING
+atribuir um valor a uma variável antes de declará-la 
+JS supõe que seja uma variável global (var)
+só acontece com var e function 
+ex: 
+numberOne = 1; (atribuição sem declaração da variável) (supõe-se que seja uma variável de escopo global)
+console.log(numberOne +2);
+var numberOne; (declaração da variável)
+
+CONSTANTES 
+SNAKE_UPPER_CASE
+escopo de bloco/local 
+não faz hoisting 
+não pode ser redeclarada nem reatribuída
+
+ESTRUTURAS DE DADOS 
+JS: tipagem dinâmica e fraca
+
+Dados Primitivos: não têm métodos dentro deles 
+numbers
+strings
+boolean
+trivial/other data: null; undefined
+
+Tipos Compostos/Não Primitivos
+objects
+arrays
+
+caso se use um método em um tipo primitivo, o JS converte para que seja utilizado um objeto referente àquele tipo primitivo
+
+
+
+STRINGS 
+comumente utilizada para textos 
+declarados entre aspas ou crases 
+é iterável
+métodos importantes:
+-concatenação
+-propriedade length
+-iterabilidade
+-formatação
+-index de letras
+
+.concat -> junta strings e retorna uma nova string 
+.length -> quantidade de caracteres na string 
+.split("") -> separa cada caracter da string e retorna uma lista (sem alterar a string)
+.split(" ") -> separa quando houver um espaço e retorna uma lista (sem alterar a string)
+.includes() -> retorna um booleano que procura pelo conteúdo entre parênteses
+.startsWith() /.endsWith() -> retorna um booleano que verifica se começa/termina com determinado caracter 
+.replace() -> não altera o conteúdo da string em si, apenas retorna uma outra frase (que pode ser atribuída a outra string)
+
+
+Atenção:
+string nome = "Eric"; 
+let nome = new String("Eric") -> typeof nome -> object 
+
+NUMBERS 
+biblioteca Math (é um objeto com vários métodos) invoca os métodos de numbers
+ex: Math.PI 
+Math.floor() / Math.ceil() -> arredonda pra baixo/cima
+prcentagem na tela só aparece com concatenação de "%" em string 
+
+ARRAYS 
+.includes() retorna booleano 
+.every(item -> item === valor) retorna booleano para verificar se todos os itens receberam o mesmo valor 
+.some(item -> item === valor) retorna booleano para verificar se algum item recebeu o valor 
+.join("") -> junta os elementos de um array e a transforma em string
+
+
+OBJETOS 
+estrutura do tipo chave:valor 
+em outras linguagens, pode aparecer como dicionário, hashtable, hashmap
+
+ex:
+let person = {
+    name: 'John',
+    age: 20
+}
+person.name -> John 
+person["adress"] = "5th Avenue";
+let mom = 'nameOfMom'
+person[mom] = 'Maria'
+
+.values -> retorna os valores 
+.keys -> retorna as chaves 
+
+EMPTY, NULL, UNDEFINED
+retornam false ???
+
+Empty:
+-variável foi declarada 
+-mas sem nenhum valor dentro
+-declarada como 0, '', [] ou {}
+
+Null:
+-quer que o valor propositalmente não exista 
+-valor não foi inicializado
+-falsy value: valor tratado como false, mas não é igual ao false booleano
+
+Undefined:
+-o valor nem sequer existe 
+
+ex: 
+(let) abacaxi 
+typeof abacaxi //undefined
+let abacaxi = "" 
+typeof abacaxi //string 
+abacaxi = null
+typeof abacaxi //object (definido como nulo)
+abacaxi // null 
+abacaxi === true/false //false (não é true nem false, é nulo)
+!abacaxi //true 
+
+let a = 0;
+let b = null;
+let c;
+---> a representa um valor vazio, b representa um valor nulo e c representa um valor indefinido 
+
+
+
+GERAL 
+vc não precisa especificar o tipo de uma variável ao declará-la 
+estruturas de dados em JS são compostas por tipos primitivos e compostos 
+va, let e const: apenas a II 
+hoisting = var 
+as 2 chamadas retornarão valor 
+objetos: são estruturas de dados do modelo "chave e valor"
+propriedade length -> presente em strings e arrays
+var tem escopo global ou local enquanto let e const tem escopo de bloco 
+constantes = upper snake case 
+
+
+
+Atividade 01
+verificar palíndromo
+é necessário verificar de duas formas diferentes se uma string é um palíndromo
+a princípio, uma palavra só
+
+Atividade 02
+trocar todos os elementos pares e diferentes de 0 de um array por 0. Se o array for vazio, retornar -1
+
+

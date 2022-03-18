@@ -1,0 +1,47 @@
+COMMAND LINE 
+operar o banco de dados via terminal / linha de comando
+o terminal é a primeira forma como se faz a conexão com o banco de dados 
+o banco de dados em geral fica hospedado em um servidor que só recebe comandos via terminal 
+/opt/lampp/bin/mysql -u root (linux)
+os comandos no terminal sempre exigem ";" no final do comando 
+show databases;
+show tables;
+
+COMANDOS 
+-ALTER TABLE 
+ex:
+ALTER TABLE cursos ADD carga_horaria INT(2)
+
+-DROP
+ex:
+DROP DATABASE/TABLE curso 
+
+MODELO RELACIONAL
+serve para relacionar informações entre várias tabelas 
+atomizar as informações
+chaves estrangeiras permitem o relacionamento entre as tabelas
+uma tabela só pode ter uma primary key, mas pode ter tantas foreing keys quanto forem necessárias
+
+COMANDOS
+-INNER JOIN
+permite a mescla entre as tabelas 
+ex:
+SELECT * FROM pessoas JOIN cursos ON pessoas.fk_cursos = cursos.id_cursos;
+SELECT * FROM `videos` JOIN author ON videos.fk_author = author.id_author;
+selecione todos os videos junto aos autores em que a chave estrangeira de autor da tabela vídeo seja igual ao ID do autor da tabela autor 
+
+MANY TO MANY
+fazer uma tabela intermediária entre as duas tabelas linkadas 
+
+GERAL 
+primary key é identificador de uma determinada linha e serve como parâmetro para consultas, exclusões e atualizações
+HTML+CSS: SELECT videos.title
+HTML+CSS: SELECT playlist.name_pl, author.name 
+I e III estão corretas 
+todas as operações existentes podem ser executadas através do command line 
+função da cláusula ON: indicar onde estão localizadas as chaves estrangeiras em cada uma das tabelas para realizar a mescla 
+foreign key é responsável pela ligação e compartilhamento de informações entre as tabelas 
+princípio da atomicidade dos dados: um dado deve ser único e exclusivo de um atributo de uma determinada entidade 
+primary key e foreign key são os dois tipos de chaves em uma entidade 
+função do Join: fazer a mescla de duas tabelas existentes no banco de dados de acordo com os parâmetros informados
+

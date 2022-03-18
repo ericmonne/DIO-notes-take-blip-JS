@@ -1,0 +1,36 @@
+COMANDOS 
+-INNER JOIN
+
+-OUTER JOIN
+exige que se identifique o local da consulta que não terá relacionamento
+
+
+-LEFT
+a primeira tabela sempre estará à esquerda 
+
+-RIGHT
+
+-UNION
+unir várias consultas diferentes
+exige o mesmo número de colunas
+
+
+-AS 
+diminuir o nome de alguma tabela para facilitar algum processo
+o comando muda o nome real da tabela na busca, de forma que ela não poderá mais ser acessada por seu nome original
+
+ex:
+SELECT * FROM videos_canais AS vc 
+JOIN videos AS v ON vc.fk_canal = v.id_video
+
+GERAL
+OUTER JOIN: exibir dados que não possuem relacionamentos entre as tabelas consultadas
+RIGHT ou LEFT: indicar de qual lado está a tabela, que exibirá os dados que NÃO possuem relacionamento com a outra tabela e deve ser usada sempre com a cláusula OUTER JOIN 
+JOIN: função é realizar a junção entre duas tabelas 
+foreign key permite o relacionamento entre tabelas 
+WHERE: cláusula cuja função é indicar um parâmetro para a realização de uma consulta
+OUTER JOIN precisa ser declarado com RIGHT ou LEFT
+nas buscas com a cláusula where, usar elemento primary key 
+UNION: cláusula cuja função é unir duas consultas diferentes
+INNER é o valor padrão da cláusula JOIN
+para realizar uma consulta entre várias tabelas, usar a cláusula INNER JOIN e declarar os campos de comparação com a cláusula ON 

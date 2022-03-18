@@ -1,0 +1,84 @@
+MODELO RELACIONAL
+surge na década de 1960
+proposto por Edgar Codd
+tabelas são compostas por:
+-entidades
+-atributos
+-chaves
+chaves permitem relacionamento entre dados 
+Usar tabelas:
+-dados organizados de forma estruturada
+-dados atômicos - partem do princípio que o dado é único, não podendo existir em qualquer outro lugar
+-consulta e manipulação de dados simplificadas
+
+MySQL 
+banco de dados gratuito 
+
+phpMyAdmin /MySQL Workbench / PostgreSQL
+sistema gerenciador de banco de dados 
+
+toda tabela deve ter índice primário para ajudar a localizar as entidades 
+
+COMANDOS 
+podem ser escritos em minúsculo,
+mas, por boas práticas, recomenda-se que sejam escritos em maiúsculo
+
+-CREATE TABLE  
+ex:
+CREATE TABLE pessoas (
+    id INT NOT NULL PRIMARY KEY AUTOINCREMENT,
+    nome VARCHAR(20) NOT NULL, 
+    nascimento DATE
+);
+
+-INSERT INTO 
+ex:
+INSERT into pessoas (nome, nascimento) VALUES ('Eric', '1989-12-28');
+
+-SELECT 
+ex:
+SELECT * FROM pessoas
+SELECT nome FROM pessoas
+
+-UPDATE
+ex:
+UPDATE pessoa SET nome ='Eric Oliveira' WHERE id=1;
+
+-DELETE
+ex:
+DELETE * FROM pessoa WHERE id=3;
+
+Boa Prática para DELETE
+sempre fazer a verificação antes com SELECT ... WHERE
+ex:
+SELECT * FROM pessoa WHERE id=3;
+DELETE FROM pessoa WHERE id=3;
+
+-ORDER BY 
+ex:
+SELECT * FROM pessoa ORDER BY nome
+ex2:
+SELECT * FROM pessoa ORDER BY nome DESC
+
+-GROUP BY e COUNT
+ex:
+SELECT COUNT(id) FROM pessoa GROUP BY genero; 
+SELECT COUNT(id), genero FROM pessoa GROUP BY genero;
+
+
+TIPOS 
+INT
+VARCHAR()
+DATETIME/DATE - sempre inseridas no formato americano
+
+
+GERAL 
+uma entidade possui atributos e chaves 
+Edgar Codd é o criador do modelo relacional 
+CREATE TABLE = criar uma nova tabela
+CREATE TABLE videos(views INT, date DATE, owner VARCHAR(10))
+acusará erro de sintaxe na tentativa de criar a tabela 
+INSERT INTO produtos(nome, descricao, preco) VALUES('Geladeira', 'Geladeira de duas portas', R$5000,90)
+INSERT INTO: criar uma nova informação na tabela 
+apenas a I está errada 
+banco de dados, SGBD

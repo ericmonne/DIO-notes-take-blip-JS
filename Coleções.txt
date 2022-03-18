@@ -1,0 +1,52 @@
+COLEÇÕES
+
+MAP 
+uma coleção de arrays no formato [chave, valor]
+pode ser iterado por um loop for/of 
+pode ser chave de qualquer tipo
+
+const myMap = new Map()
+
+Métodos:
+.set('chave', 'valor') - adicionar elementos
+.get(chave) - retorna o valor 
+.delete("chave") - deleta o valor -> se der .get(chave) depois, o retorno será undefined 
+
+                                                MAP X OBJETO 
+pode ter chave de qualquer tipo                     X chaves são sempre string 
+possui a propriedade length                         X precisa iterar por todas as propriedades para mostrar quantas propriedades possui
+mais fáceis de iterar                               
+utilizado quando o valor das chaves é desconhecido  X utilizado quando se conhece o valor das chaves
+valores têm o mesmo tipo                            X valores podem ter tipos diferentes
+
+
+SET 
+coleção chaveada
+estrutura que armazena valores únicos 
+
+const mySet = new Set();
+
+Métodos: 
+.add(valor)
+.has(valor) - retorna booleano que informa se há ou não o valor 
+.delete()
+
+                                                SET X ARRAY 
+valores únicos                                      X valores podem ser repetidos
+consulta numero de registros pela propriedade size  X consulta numero de registros pela propriedade length
+não possui métodos map, filter, reduce  
+número de operações é mais limitado                 X mais flexível, possui mais operações
+
+para retornar um array com valores únicos a partir de um array com valores repetidos através de um set, pode-se usar um spread(?) (ver sets.js)
+
+GERAL 
+Sets e Maps são coleções chaveadas, enquanto Arrays e Objetos não 
+Mapas são estruturas de dados no modelo chave e valor 
+Sets são estruturas de dados únicos
+Mapas permitem chaves de qualquer tipo, enquanto Objetos não
+em coleções chaveadas, é possível utilizar o loop for...of 
+.get() retorna um valor de um map 
+.has() verifica se um set possui um valor
+.add() adiciona valor em um Set 
+.set() adiciona valor a um Map 
+sobre sets: para retornar o tamanho, é necessário acessar a propriedade size 
